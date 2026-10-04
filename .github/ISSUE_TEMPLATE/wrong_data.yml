@@ -1,0 +1,24 @@
+name: Out of date rate or rule
+description: A tax rate, province name or postal code rule is wrong or has changed.
+labels: [data]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong?
+      description: The province or territory, the date or postal code you looked up, what the library gave you and what it should be.
+    validations:
+      required: true
+  - type: input
+    id: effective
+    attributes:
+      label: When does it take effect?
+      description: For a rate change, the first day the new rate applies.
+      placeholder: For example, 2027-04-01
+  - type: input
+    id: source
+    attributes:
+      label: Official source
+      description: A link to the Canada Revenue Agency, the province or Canada Post.
+    validations:
+      required: true

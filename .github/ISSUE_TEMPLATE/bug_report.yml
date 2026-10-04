@@ -1,0 +1,24 @@
+name: Bug
+description: A function throws, rejects good input, accepts bad input or gives the wrong result.
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: code
+    attributes:
+      label: Code that shows it
+      description: The smallest call that shows the problem, with its input.
+      render: ts
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where you saw it
+      placeholder: For example, version 1.0.0 in Node.js 22
